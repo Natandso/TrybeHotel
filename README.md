@@ -369,9 +369,11 @@ O corpo da requisição deve seguir o padrão abaixo
 	"Password": "123456"
 }
 ```
-Será testado que não é possível inserir uma pessoa usuária com e-mail repetido
-Será testado que é possível inserir uma pessoa usuária com sucesso
-⚠️ A partir da criação deste endpoint, você poderá utilizar o cadastro de pessoas usuárias. O sistema automaticamente cadastrará uma pessoa usuária admin com o e-mail admin@admin.com e senha admin. Você também pode alterar qualquer pessoa usuária para admin realizando um update no banco de dados com o comando SQL:
+<Ul>
+<li>Será testado que não é possível inserir uma pessoa usuária com e-mail repetido.</li>
+<li>Será testado que é possível inserir uma pessoa usuária com sucesso.</li>
+<li>⚠️ A partir da criação deste endpoint, você poderá utilizar o cadastro de pessoas usuárias. O sistema automaticamente cadastrará uma pessoa usuária admin com o e-mail admin@admin.com e senha admin. Você também pode alterar qualquer pessoa usuária para admin realizando um update no banco de dados com o comando SQL:</li>
+</Ul>
 
 UPDATE Users SET UserType = 'admin' where UserId = 1
 Substitua o número 1 pelo id da pessoa usuária que você deseja adicionar permissão de admin.
@@ -400,8 +402,10 @@ O corpo da requisição deve seguir o padrão abaixo
 	"Password": "123456"
 }
 ```
-Será testado que não é possível fazer login com credenciais erradas
-Será testado que é possível fazer login com sucesso
+<UL>
+<li>Será testado que não é possível fazer login com credenciais erradas.</li>
+<li>Será testado que é possível fazer login com sucesso.</li>
+</UL>
 
 
 ### 12. Adicione a autorização de admin no endpoint /POST hotel
@@ -417,9 +421,11 @@ As políticas devem ser criadas no arquivo src/TrybeHotel/Program.cs.
 A adição da autorização da política no controller deve ser feita no arquivo src/TrybeHotel/Controllers/HotelController.cs.
 O que será testado:
 
-Será validado que é possível realizar as operações do endpoint com a autorização de admin.
-Será validado que o status será proibido caso o acesso não seja admin.
-Será validado que o status será não autorizado caso o acesso não exista.
+<UL>
+<li>Será validado que é possível realizar as operações do endpoint com a autorização de admin.</li>
+<li>Será validado que o status será proibido caso o acesso não seja admin.</li>
+<li>Será validado que o status será não autorizado caso o acesso não exista.</li>
+</UL>
 
 ### 13. Adicione a autorização de admin no endpoint /POST room
 Mais informações:
@@ -433,10 +439,11 @@ Crie uma política chamada Client que requira a claim ClaimType.Email. Este é o
 As políticas devem ser criadas no arquivo src/TrybeHotel/Program.cs. Este é o mesmo desenvolvimento do requisito anterior. Caso já tenha feito, pule esta parte.
 A adição da autorização da política no controller deve ser feita no arquivo src/TrybeHotel/Controllers/RoomController.cs.
 O que será testado:
-
-Será validado que é possível realizar as operações do endpoint com a autorização de admin.
-Será validado que o status será proibido caso o acesso não seja admin.
-Será validado que o status será não autorizado caso o acesso não exista.
+<UL>
+<li>Será validado que é possível realizar as operações do endpoint com a autorização de admin.</li>
+<li>Será validado que o status será proibido caso o acesso não seja admin.</li>
+<li>Será validado que o status será não autorizado caso o acesso não exista.</li>
+</UL>
 
 ### 14. Adicione a autorização de admin no endpoint /DELETE room
 Mais informações:
@@ -451,9 +458,11 @@ As políticas devem ser criadas no arquivo src/TrybeHotel/Program.cs. Este é o 
 A adição da autorização da política no controller deve ser feita no arquivo src/TrybeHotel/Controllers/RoomController.cs.
 O que será testado:
 
-Será validado que é possível realizar as operações do endpoint com a autorização de admin.
-Será validado que o status será proibido caso o acesso não seja admin.
-Será validado que o status será não autorizado caso o acesso não exista.
+<UL>
+<li>Será validado que é possível realizar as operações do endpoint com a autorização de admin.</li>
+<li>Será validado que o status será proibido caso o acesso não seja admin.</li>
+<li>Será validado que o status será não autorizado caso o acesso não exista.</li>
+</UL>
 
 ### 15. Desenvolva o endpoint POST /booking
 Mais informações:
@@ -480,9 +489,12 @@ O corpo da requisição deve seguir o padrão abaixo
 	"RoomId":1
 }
 ```
-Será testado que não é possível inserir uma reserva se a quantidade de hóspedes for maior do que a capacidade do quarto
-Será testado que é possível inserir uma nova reserva com sucesso
-A resposta deve ser o status 201.
+<UL>
+<li>Será testado que não é possível inserir uma reserva se a quantidade de hóspedes for maior do que a capacidade do quarto</li>
+<li>Será testado que é possível inserir uma nova reserva com sucesso</li>
+<li>A resposta deve ser o status 201.</li>
+</UL>
+
 O corpo da resposta deve seguir o formato abaixo:
 ```json
 {
@@ -506,10 +518,11 @@ O corpo da resposta deve seguir o formato abaixo:
 }
 ```
 O que será testado:
-
-Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo
-Será testado que o status de retorno será 201.
-Será testado que o corpo da resposta segue o padrão esperado.
+<UL>
+<li>Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo</li>
+<li>Será testado que o status de retorno será 201.</li>
+<li>Será testado que o corpo da resposta segue o padrão esperado.</li>
+</UL>
 
 ### 16. Desenvolva o endpoint GET /booking
 Mais informações:
@@ -528,10 +541,12 @@ O endpoint deve conter autorização da política Client e deve responder apenas
 👀 De olho na dica 2: Para converter qualquer tipo de coleção no tipo de coleção List, utilize o método ToList().
 
 👀 De olho na dica 3: Para obter um único elemento de uma coleção, você pode obter o primeiro com o método First(). Exemplo: coleção.First().
+<UL>
+<li>Será testado que não é possível consultar uma reserva com credencial inválida</li>
+<li>Será testado que é possível consultar uma reserva com sucesso</li>
+<li>A resposta deve ser o status 200.</li>
+</UL>
 
-Será testado que não é possível consultar uma reserva com credencial inválida
-Será testado que é possível consultar uma reserva com sucesso
-A resposta deve ser o status 200.
 O corpo da resposta deve seguir o formato abaixo:
 ```json
 {
@@ -571,16 +586,10 @@ O endpoint deve conter autorização da política Admin e deve responder apenas 
 👀 De olho na dica 2: Para converter qualquer tipo de coleção no tipo de coleção List, utilize o método ToList().
 
 <UL>
-<li>
-Será testado que não é possível consultar uma reserva com credencial inválida
-
-Será testado que é possível consultar uma reserva com sucesso
-
-A resposta deve ser o status 200.
-
-O corpo da resposta deve seguir o formato abaixo:
-
-</li>
+<li>Será testado que não é possível consultar uma reserva com credencial inválida</li>
+<li>Será testado que é possível consultar uma reserva com sucesso</li>
+<li>A resposta deve ser o status 200.</li>
+<li>O corpo da resposta deve seguir o formato abaixo:</li>
 </UL>
 
  ```json
