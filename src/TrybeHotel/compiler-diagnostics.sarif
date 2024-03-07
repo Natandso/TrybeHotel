@@ -30,27 +30,6 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "O propriedade não anulável 'Secret' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Services/TokenOptions.cs",
-                "region": {
-                  "startLine": 6,
-                  "startColumn": 23,
-                  "endLine": 6,
-                  "endColumn": 29
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8618",
-          "level": "warning",
           "message": "O propriedade não anulável 'Email' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
           "locations": [
             {
@@ -177,6 +156,27 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
+          "message": "O propriedade não anulável 'Secret' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Services/TokenOptions.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
           "message": "O propriedade não anulável 'Name' precisa conter um valor não nulo ao sair do construtor. Considere declarar o propriedade como anulável.",
           "locations": [
             {
@@ -259,66 +259,6 @@
           }
         },
         {
-          "ruleId": "CS0103",
-          "level": "error",
-          "message": "O nome \"Seeder\" não existe no contexto atual",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/TrybeHotelContext.cs",
-                "region": {
-                  "startLine": 13,
-                  "startColumn": 9,
-                  "endLine": 13,
-                  "endColumn": 15
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Desreferência de uma referência possivelmente nula.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Controllers/BookingController.cs",
-                "region": {
-                  "startLine": 27,
-                  "startColumn": 25,
-                  "endLine": 27,
-                  "endColumn": 57
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Desreferência de uma referência possivelmente nula.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Controllers/BookingController.cs",
-                "region": {
-                  "startLine": 45,
-                  "startColumn": 25,
-                  "endLine": 45,
-                  "endColumn": 57
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "CS1998",
           "level": "warning",
           "message": "Este método assíncrono não possui operadores 'await' e será executado de modo síncrono. É recomendável o uso do operador 'await' para aguardar chamadas à API desbloqueadas ou do operador 'await Task.Run(...)' para realizar um trabalho associado à CPU em um thread em segundo plano.",
@@ -346,12 +286,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Controllers/GeoController.cs",
+                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Services/GeoService.cs",
                 "region": {
-                  "startLine": 35,
-                  "startColumn": 42,
-                  "endLine": 35,
-                  "endColumn": 61
+                  "startLine": 16,
+                  "startColumn": 35,
+                  "endLine": 16,
+                  "endColumn": 47
                 }
               }
             }
@@ -367,12 +307,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Services/GeoService.cs",
+                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Controllers/GeoController.cs",
                 "region": {
-                  "startLine": 16,
-                  "startColumn": 35,
-                  "endLine": 16,
-                  "endColumn": 47
+                  "startLine": 35,
+                  "startColumn": 42,
+                  "endLine": 35,
+                  "endColumn": 61
                 }
               }
             }
@@ -415,6 +355,48 @@
                   "startColumn": 54,
                   "endLine": 28,
                   "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Desreferência de uma referência possivelmente nula.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Controllers/BookingController.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 25,
+                  "endLine": 27,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Desreferência de uma referência possivelmente nula.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Controllers/BookingController.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 25,
+                  "endLine": 45,
+                  "endColumn": 57
                 }
               }
             }
@@ -640,27 +622,6 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/RoomRepository.cs",
-                "region": {
-                  "startLine": 38,
-                  "startColumn": 33,
-                  "endLine": 38,
-                  "endColumn": 65
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8601",
-          "level": "warning",
-          "message": "Possível atribuição de referência nula.",
-          "locations": [
-            {
-              "resultFile": {
                 "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/UserRepository.cs",
                 "region": {
                   "startLine": 59,
@@ -705,73 +666,10 @@
               "resultFile": {
                 "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/RoomRepository.cs",
                 "region": {
-                  "startLine": 72,
-                  "startColumn": 29,
-                  "endLine": 72,
-                  "endColumn": 40
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8601",
-          "level": "warning",
-          "message": "Possível atribuição de referência nula.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/UserRepository.cs",
-                "region": {
-                  "startLine": 76,
-                  "startColumn": 24,
-                  "endLine": 76,
-                  "endColumn": 30
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8601",
-          "level": "warning",
-          "message": "Possível atribuição de referência nula.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/UserRepository.cs",
-                "region": {
-                  "startLine": 77,
-                  "startColumn": 25,
-                  "endLine": 77,
-                  "endColumn": 32
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8601",
-          "level": "warning",
-          "message": "Possível atribuição de referência nula.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/UserRepository.cs",
-                "region": {
-                  "startLine": 78,
-                  "startColumn": 28,
-                  "endLine": 78,
-                  "endColumn": 38
+                  "startLine": 38,
+                  "startColumn": 33,
+                  "endLine": 38,
+                  "endColumn": 65
                 }
               }
             }
@@ -928,6 +826,90 @@
           }
         },
         {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possível atribuição de referência nula.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 24,
+                  "endLine": 76,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possível atribuição de referência nula.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 25,
+                  "endLine": 77,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possível atribuição de referência nula.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/UserRepository.cs",
+                "region": {
+                  "startLine": 78,
+                  "startColumn": 28,
+                  "endLine": 78,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possível atribuição de referência nula.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/natan/ProjetcsC%23/TrybeHotelFase-D-08/csharp-031-csharp-projeto-trybe-hotel-fase-d/src/TrybeHotel/Repository/RoomRepository.cs",
+                "region": {
+                  "startLine": 72,
+                  "startColumn": 29,
+                  "endLine": 72,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "CA1050",
           "level": "note",
           "message": "Declare types in namespaces",
@@ -1013,20 +995,6 @@
               "PortedFromFxCop",
               "Telemetry",
               "EnabledRuleInAggressiveMode"
-            ]
-          }
-        },
-        "CS0103": {
-          "id": "CS0103",
-          "defaultLevel": "error",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0103)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry",
-              "NotConfigurable"
             ]
           }
         },
