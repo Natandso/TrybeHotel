@@ -287,4 +287,247 @@ O que será testado:
 Será testado que, quando solicitada a requisição, a mesma faça a exclusão solicitada no banco de dados.
 Será testado que o status de retorno será 204.
 
+
+### 9. Implemente as models da aplicação
+Mais informações:
+Implemente os arquivos do diretório /src/TrybeHotel/Models/
+
+Implemente as models do projeto anterior
+Implemente a model User
+Implemente a model Booking
+Implemente o contexto do banco de dados
+
+O que será testado:
+
+Será testado que todas as models foram implementadas corretamente.
+Será testado que as models possuem as chaves primárias e estrangeiras necessárias.
+
+### 10. Desenvolva o endpoint POST /user
+Mais informações:
+Este endpoint será responsável por inserir uma nova pessoa usuária.
+Implemente a lógica da sua controller no método Add() do arquivo src/TrybeHotel/Controllers/UserController.cs.
+Implemente a lógica de interação ao banco de dados no método Add() do arquivo src/TrybeHotel/Repository/UserRepository.cs.
+A sua repository retorna um tipo UserDto que deverá ser implementado no arquivo src/TrybeHotel/Dto/UserDto.cs. A sua classe de DTO deve seguir o formato da response da requisição.
+O corpo da sua requisição deve seguir o tipo UserDtoInsert que deverá ser implementado no arquivo src/TrybeHotel/Dto/UserDto.cs. A sua classe de DTO deve seguir o formato da request da requisição.
+
+👀 De olho na dica: Monte o retorno do seu repository com os conhecimentos de LINQ e DTO já obtidos.
+
+👀 De olho na dica 2: Para obter um único elemento de uma coleção, você pode obter o primeiro com o método First(). Exemplo: coleção.First().
+
+
+O endpoint deve ser acessível através da URL /user e deve ser do tipo POST;
+O atributo userType deve ser salvo com o valor client.
+O corpo da requisição deve seguir o padrão abaixo
+{
+	"Name":"Rebeca",
+	"Email": "rebeca.santos@trybehotel.com",
+	"Password": "123456"
+}
+Será testado que não é possível inserir uma pessoa usuária com e-mail repetido
+Será testado que é possível inserir uma pessoa usuária com sucesso
+⚠️ A partir da criação deste endpoint, você poderá utilizar o cadastro de pessoas usuárias. O sistema automaticamente cadastrará uma pessoa usuária admin com o e-mail admin@admin.com e senha admin. Você também pode alterar qualquer pessoa usuária para admin realizando um update no banco de dados com o comando SQL:
+
+UPDATE Users SET UserType = 'admin' where UserId = 1
+Substitua o número 1 pelo id da pessoa usuária que você deseja adicionar permissão de admin.
+
+### 11. Desenvolva o endpoint POST /login
+Mais informações:
+Este endpoint será responsável por fazer um login.
+Implemente a lógica da sua controller no método Login() do arquivo src/TrybeHotel/Controllers/LoginController.cs.
+Implemente a lógica de interação ao banco de dados no método lOGIN() do arquivo src/TrybeHotel/Repository/UserRepository.cs.
+A sua repository retorna um tipo UserDto que deverá ser implementado no arquivo src/TrybeHotel/Dto/UserDto.cs. A sua classe de DTO deve seguir o formato da response da requisição.
+O corpo da sua requisição deve seguir o tipo LoginDto que deverá ser implementado no arquivo src/TrybeHotel/Dto/UserDto.cs. A sua classe de DTO deve seguir o formato da request da requisição.
+A lógica para criar o token pode ser implementada nos métodos Generate e AddClaims no arquivo src/TrybeHotel/Services/TokenGenerator.cs.
+Adicione em suas claims, uma claim com o tipo ClaimType.Email e o valor do e-mail da pessoa usuária.
+Caso a pessoa usuária seja do tipo admin, adicione em suas claims, uma claim com o tipo ClaimType.Role e o valor admin.
+
+👀 De olho na dica: Monte o retorno do seu repository com os conhecimentos de LINQ e DTO já obtidos.
+
+👀 De olho na dica 2: Para obter um único elemento de uma coleção, você pode obter o primeiro com o método First(). Exemplo: coleção.First().
+
+
+O endpoint deve ser acessível através da URL /login e deve ser do tipo POST;
+O corpo da requisição deve seguir o padrão abaixo
+{
+	"Email": "rebeca.santos@trybehotel.com",
+	"Password": "123456"
+}
+Será testado que não é possível fazer login com credenciais erradas
+Será testado que é possível fazer login com sucesso
+
+
+### 12. Adicione a autorização de admin no endpoint /POST hotel
+Mais informações:
+Este endpoint já foi desenvolvido na fase anterior. Agora iremos apenas adicionar uma permissão de admin.
+Você pode copiar todas as controllers do projeto anterior.
+
+Siga as instruções da seção Continuando o projeto Trybe hotel
+
+Crie uma política chamada Admin que requira a claim ClaimType.Email e a claim ClaimType.Role como admin.
+Crie uma política chamada Client que requira a claim ClaimType.Email.
+As políticas devem ser criadas no arquivo src/TrybeHotel/Program.cs.
+A adição da autorização da política no controller deve ser feita no arquivo src/TrybeHotel/Controllers/HotelController.cs.
+O que será testado:
+
+Será validado que é possível realizar as operações do endpoint com a autorização de admin.
+Será validado que o status será proibido caso o acesso não seja admin.
+Será validado que o status será não autorizado caso o acesso não exista.
+
+### 13. Adicione a autorização de admin no endpoint /POST room
+Mais informações:
+Este endpoint já foi desenvolvido na fase anterior. Agora iremos apenas adicionar uma permissão de admin.
+Você pode copiar todas as controllers do projeto anterior.
+
+Siga as instruções da seção Continuando o projeto Trybe hotel
+
+Crie uma política chamada Admin que requira a claim ClaimType.Email e a claim ClaimType.Role como admin. Este é o mesmo desenvolvimento do requisito anterior. Caso já tenha feito, pule esta parte.
+Crie uma política chamada Client que requira a claim ClaimType.Email. Este é o mesmo desenvolvimento do requisito anterior. Caso já tenha feito, pule esta parte.
+As políticas devem ser criadas no arquivo src/TrybeHotel/Program.cs. Este é o mesmo desenvolvimento do requisito anterior. Caso já tenha feito, pule esta parte.
+A adição da autorização da política no controller deve ser feita no arquivo src/TrybeHotel/Controllers/RoomController.cs.
+O que será testado:
+
+Será validado que é possível realizar as operações do endpoint com a autorização de admin.
+Será validado que o status será proibido caso o acesso não seja admin.
+Será validado que o status será não autorizado caso o acesso não exista.
+
+### 14. Adicione a autorização de admin no endpoint /DELETE room
+Mais informações:
+Este endpoint já foi desenvolvido na fase anterior. Agora iremos apenas adicionar uma permissão de admin.
+Você pode copiar todas as controllers do projeto anterior.
+
+Siga as instruções da seção Continuando o projeto Trybe hotel
+
+Crie uma política chamada Admin que requira a claim ClaimType.Email e a claim ClaimType.Role como admin. Este é o mesmo desenvolvimento do requisito anterior. Caso já tenha feito, pule esta parte.
+Crie uma política chamada Client que requira a claim ClaimType.Email. Este é o mesmo desenvolvimento do requisito anterior. Caso já tenha feito, pule esta parte.
+As políticas devem ser criadas no arquivo src/TrybeHotel/Program.cs. Este é o mesmo desenvolvimento do requisito anterior. Caso já tenha feito, pule esta parte.
+A adição da autorização da política no controller deve ser feita no arquivo src/TrybeHotel/Controllers/RoomController.cs.
+O que será testado:
+
+Será validado que é possível realizar as operações do endpoint com a autorização de admin.
+Será validado que o status será proibido caso o acesso não seja admin.
+Será validado que o status será não autorizado caso o acesso não exista.
+
+### 15. Desenvolva o endpoint POST /booking
+Mais informações:
+Este endpoint será responsável por inserir uma nova reserva.
+Implemente a lógica da sua controller no método Add() do arquivo src/TrybeHotel/Controllers/BookingController.cs.
+Implemente a lógica de interação ao banco de dados no método Add() do arquivo src/TrybeHotel/Repository/BookingRepository.cs.
+A sua repository retorna um tipo BookingResponse que deverá ser implementado no arquivo src/TrybeHotel/Dto/BookingDto.cs. A sua classe de DTO deve seguir o formato da response da requisição.
+O corpo da sua requisição deve seguir o tipo BookingDtoInsert que deverá ser implementado no arquivo src/TrybeHotel/Dto/BookingDto.cs. A sua classe de DTO deve seguir o formato da request da requisição.
+
+👀 De olho na dica: Monte o retorno do seu repository com os conhecimentos de LINQ e DTO já obtidos.
+
+👀 De olho na dica 2: Para obter um único elemento de uma coleção, você pode obter o primeiro com o método First(). Exemplo: coleção.First().
+
+
+O endpoint deve ser acessível através da URL /booking e deve ser do tipo POST;
+O endpoint deve ter autorização para a Política Client (desenvolvida nos requisitos 4, 5 ou 6).
+O endpoint deve obter a pessoa usuária pelo token.
+O corpo da requisição deve seguir o padrão abaixo
+{
+	"CheckIn":"2030-08-27",
+	"CheckOut":"2030-08-28",
+	"GuestQuant":"1",
+	"RoomId":1
+}
+Será testado que não é possível inserir uma reserva se a quantidade de hóspedes for maior do que a capacidade do quarto
+Será testado que é possível inserir uma nova reserva com sucesso
+A resposta deve ser o status 201.
+O corpo da resposta deve seguir o formato abaixo:
+{
+	"bookingId": 1,
+	"checkIn": "2030-08-27T00:00:00",
+	"checkOut": "2030-08-28T00:00:00",
+	"guestQuant": 1,
+	"room": {
+		"roomId": 1,
+		"name": "Suite básica",
+		"capacity": 2,
+		"image": "image suite",
+		"hotel": {
+			"hotelId": 1,
+			"name": "Trybe Hotel RJ",
+			"address": "Avenida Atlântica, 1400",
+			"cityId": 1,
+			"cityName": "Rio de Janeiro"
+		}
+	}
+}
+O que será testado:
+
+Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo
+Será testado que o status de retorno será 201.
+Será testado que o corpo da resposta segue o padrão esperado.
+
+### 16. Desenvolva o endpoint GET /booking
+Mais informações:
+Este endpoint será responsável por listar uma única reserva.
+Implemente a lógica da sua controller no método GetBooking() do arquivo src/TrybeHotel/Controllers/BookingController.cs.
+Implemente a lógica de interação ao banco de dados no método GetBooking() do arquivo src/TrybeHotel/Repository/BookingRepository.cs.
+A sua repository retorna um tipo BookingResponse que deverá ser implementado no arquivo src/TrybeHotel/Dto/BookingDto.cs. A sua classe de DTO deve seguir o formato da response da requisição.
+
+O endpoint deve ser acessível através da URL /booking/:id e deve ser do tipo GET;
+O corpo da requisição é vazio.
+O id da reserva deve estar na URL.
+O endpoint deve conter autorização da política Client e deve responder apenas a consultas da pessoa usuária que realizou a reserva.
+
+👀 De olho na dica: Monte o retorno do seu repository com os conhecimentos de LINQ e DTO já obtidos.
+
+👀 De olho na dica 2: Para converter qualquer tipo de coleção no tipo de coleção List, utilize o método ToList().
+
+👀 De olho na dica 3: Para obter um único elemento de uma coleção, você pode obter o primeiro com o método First(). Exemplo: coleção.First().
+
+Será testado que não é possível consultar uma reserva com credencial inválida
+Será testado que é possível consultar uma reserva com sucesso
+A resposta deve ser o status 200.
+O corpo da resposta deve seguir o formato abaixo:
+{
+	"bookingId": 1002,
+	"checkIn": "2023-08-27T00:00:00",
+	"checkOut": "2023-08-28T00:00:00",
+	"guestQuant": 1,
+	"room": {
+  	  "roomId": 1,
+  	  "name": "Suite básica",
+  	  "capacity": 2,
+  	  "image": "image suite",
+  	  "hotel": {
+			"hotelId": 1,
+  		  "name": "Trybe Hotel RJ",
+  		  "address": "Avenida Atlântica, 1400",
+  		  "cityId": 1,
+  		"c  ityName": "Rio de Janeiro"
+  	  }
+    }
+}
+
+### 17. Desenvolva o endpoint GET /user
+Mais informações:
+Este endpoint será responsável por listar todas as pessoas usuárias.
+Implemente a lógica da sua controller no método GetUsers() do arquivo src/TrybeHotel/Controllers/UserController.cs.
+Implemente a lógica de interação ao banco de dados no método GetUsers() do arquivo src/TrybeHotel/Repository/UserRepository.cs.
+A sua repository retorna um tipo UserDto que deverá ser implementado no arquivo src/TrybeHotel/Dto/UserDto.cs. A sua classe de DTO deve seguir o formato da response da requisição.
+
+O endpoint deve ser acessível através da URL /user e deve ser do tipo GET;
+O corpo da requisição é vazio.
+O endpoint deve conter autorização da política Admin e deve responder apenas a consultas da pessoa usuária com essa permissão.
+
+👀 De olho na dica: Monte o retorno do seu repository com os conhecimentos de LINQ e DTO já obtidos.
+
+👀 De olho na dica 2: Para converter qualquer tipo de coleção no tipo de coleção List, utilize o método ToList().
+
+Será testado que não é possível consultar uma reserva com credencial inválida
+Será testado que é possível consultar uma reserva com sucesso
+A resposta deve ser o status 200.
+O corpo da resposta deve seguir o formato abaixo:
+[
+    {
+	  "userId": 1,
+  	  "name": "Rebeca",
+  	  "email": "rebeca.santos@trybehotel.com",
+  	  "userType": "client"
+    }, 
+  /*...*/
+]
+
 </details>
