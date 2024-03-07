@@ -11,16 +11,43 @@ namespace TrybeHotel.Repository
             _context = context;
         }
 
-        //  5. Refatore o endpoint GET /hotel
+        // 4. Desenvolva o endpoint GET /hotel
         public IEnumerable<HotelDto> GetHotels()
         {
-            throw new NotImplementedException();
-        }
+            var allHotels = _context.Hotels.Select(hotel => new HotelDto
+            {
+                HotelId = hotel.HotelId,
+                Name = hotel.Name,
+                Address = hotel.Address,
+                CityId = hotel.CityId,
+                State = _context.Cities.Where(state => state.CityId == hotel.CityId).Select(state => state.State).FirstOrDefault() ?? string.Empty,
+            });
 
-        // 6. Refatore o endpoint POST /hotel
+            return allHotels;
+        }
+        
+        // 5. Desenvolva o endpoint POST /hotel
         public HotelDto AddHotel(Hotel hotel)
         {
-           throw new NotImplementedException();
-        }
+            var newHotel = new Hotel
+            {
+                Name = hotel.Name,
+                Address = hotel.Address,
+                CityId = hotel.CityId,
+        };
+            
+                _context.Hotels.Add(newHotel);
+                _context.SaveChanges();
+    
+                return new HotelDto
+                {
+                    HotelId = newHotel.HotelId,
+                    Name = newHotel.Name,
+                    Address = newHotel.Address,
+                    CityId = newHotel.CityId,
+                    CityName = _context.Cities.Where(city => city.CityId == newHotel.CityId).Select(city => city.Name).FirstOrDefault(),
+                    State = _context.Cities.Where(state => state.CityId == newHotel.CityId).Select(state => state.State).FirstOrDefault() ?? string.Empty,
+                };
+            }
     }
 }

@@ -5,8 +5,15 @@ namespace TrybeHotel.Controllers
 {
     [ApiController]
     [Route("/")]
-    public class StatusController : Controller
+    public class StatusController : ControllerBase
     {
+    [HttpGet]
+
+    public IActionResult GetStatus()
+    {
+        return Ok(new { status = "online" });
+    }
     
     }
+
 }
