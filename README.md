@@ -94,6 +94,8 @@ O corpo da resposta deve seguir o formato abaixo:
 
   /*...*/
 ]
+```
+
 O que será testado:
 
 <UL>
@@ -116,6 +118,8 @@ A sua repository retorna um tipo CityDto que deverá ser implementado no arquivo
 
 O endpoint deve ser acessível através da URL /city e deve ser do tipo POST;
 O corpo da requisição deve seguir o padrão abaixo
+
+```json 
 {
 	"Name": "Rio de Janeiro"
 }
@@ -125,11 +129,14 @@ O corpo da resposta deve seguir o formato abaixo:
 	  "cityId": 2,
 	  "name": "Rio de Janeiro"
 },
-O que será testado:
+```
 
+O que será testado:
+<UL>
 Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo
 Será testado que o status de retorno será 201.
 Será testado que o corpo da resposta segue o padrão esperado.
+</UL>
 
 ### 4. Desenvolva o endpoint GET /hotel
 Mais informações:
@@ -147,6 +154,8 @@ O endpoint deve ser acessível através da URL /hotel e deve ser do tipo GET;
 O corpo da requisição é vazio.
 A resposta deve ser o status 200.
 O corpo da resposta deve seguir o formato abaixo:
+
+```json
 [
     {
 		  "hotelId": 1,
@@ -158,11 +167,14 @@ O corpo da resposta deve seguir o formato abaixo:
 
   /*...*/
 ]
-O que será testado:
+```
 
+O que será testado:
+<UL>
 Será testado que, quando solicitada a requisição, a mesma informe os dados correspondentes do banco de dados.
 Será testado que o status de retorno será 200.
 Será testado que o corpo da resposta segue o padrão esperado.
+</UL>
 
 ### 5. Desenvolva o endpoint POST /hotel
 Mais informações:
@@ -178,13 +190,19 @@ A sua repository retorna um tipo HotelDto que deverá ser implementado no arquiv
 
 O endpoint deve ser acessível através da URL /hotel e deve ser do tipo POST;
 O corpo da requisição deve seguir o padrão abaixo
+
+```json
 {
 	"Name":"Trybe Hotel RJ",
 	"Address":"Avenida Atlântica, 1400",
 	"CityId": 2
 }
+```
+
 A resposta deve ser o status 201.
 O corpo da resposta deve seguir o formato abaixo:
+
+```json
 {
 	"hotelId": 2,
 	"name": "Trybe Hotel RJ",
@@ -192,11 +210,14 @@ O corpo da resposta deve seguir o formato abaixo:
 	"cityId": 2,
 	"cityName": "Rio de Janeiro"
 }
-O que será testado:
+```
 
+O que será testado:
+<UL>
 Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo
 Será testado que o status de retorno será 201.
 Será testado que o corpo da resposta segue o padrão esperado.
+</UL>
 
 ### 6. Desenvolva o endpoint GET /room/:hotelId
 Mais informações:
@@ -214,6 +235,8 @@ O endpoint deve ser acessível através da URL /room/:hotelId e deve ser do tipo
 O corpo da requisição é vazio.
 A resposta deve ser o status 200.
 O corpo da resposta deve seguir o formato abaixo:
+
+```json
 [
     {
 		  "roomId": 1,
@@ -231,11 +254,15 @@ O corpo da resposta deve seguir o formato abaixo:
 
   /*...*/
 ]
+
+ ```
 O que será testado:
 
+<UL>
 Será testado que, quando solicitada a requisição, a mesma informe os dados correspondentes do banco de dados.
 Será testado que o status de retorno será 200.
 Será testado que o corpo da resposta segue o padrão esperado.
+</UL>
 
 ### 7. Desenvolva o endpoint POST /room
 Mais informações:
@@ -251,14 +278,18 @@ A sua repository retorna um tipo RoomDto que deverá ser implementado no arquivo
 
 O endpoint deve ser acessível através da URL /room e deve ser do tipo POST;
 O corpo da requisição deve seguir o padrão abaixo
+
+```json
 {
 	"Name":"Suite básica",
 	"Capacity":2,
 	"Image":"image suite",
 	"HotelId": 1
 }
+```
 A resposta deve ser o status 201.
 O corpo da resposta deve seguir o formato abaixo:
+```json
 {
 	"roomId": 1,
 	"name": "Suite básica",
@@ -272,11 +303,13 @@ O corpo da resposta deve seguir o formato abaixo:
 		"cityName": "São Paulo"
 	}
 }
+```
 O que será testado:
-
+<UL>
 Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo
 Será testado que o status de retorno será 201.
 Será testado que o corpo da resposta segue o padrão esperado.
+</UL>
 
 ### 8. Desenvolva o endpoint DELETE /room/:roomId
 Mais informações:
@@ -288,8 +321,10 @@ O corpo da requisição é vazio.
 A resposta deve ser o status 204.
 O que será testado:
 
+<UL>
 Será testado que, quando solicitada a requisição, a mesma faça a exclusão solicitada no banco de dados.
 Será testado que o status de retorno será 204.
+<UL>
 
 
 ### 9. Implemente as models da aplicação
@@ -302,9 +337,10 @@ Implemente a model Booking
 Implemente o contexto do banco de dados
 
 O que será testado:
-
+<UL>
 Será testado que todas as models foram implementadas corretamente.
 Será testado que as models possuem as chaves primárias e estrangeiras necessárias.
+</UL>
 
 ### 10. Desenvolva o endpoint POST /user
 Mais informações:
