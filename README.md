@@ -137,7 +137,7 @@ O corpo da resposta deve seguir o formato abaixo:
 
 O que será testado:
 <ul>
-Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo
+<li>Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo</li>
 Será testado que o status de retorno será 201.
 Será testado que o corpo da resposta segue o padrão esperado.
 </ul>
