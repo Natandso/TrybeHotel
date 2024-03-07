@@ -330,7 +330,6 @@ O que será testado:
 <li>Será testado que o status de retorno será 204.</li>
 <UL>
 
-
 ### 9. Implemente as models da aplicação
 Mais informações:
 Implemente os arquivos do diretório /src/TrybeHotel/Models/
