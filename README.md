@@ -39,17 +39,15 @@ Arquivos como .trybe e trybe.yml
 
 
 # Sobre os Requisitos do Projeto
-Controllers/: Este diretório armazena os arquivos com as lógicas dos controllers da aplicação. Os métodos a serem desenvolvidos estão prontos mas sem implementação alguma, o que você desenvolverá ao longo do projeto.
+<UL>
+<li>Controllers/: Este diretório armazena os arquivos com as lógicas dos controllers da aplicação. Os métodos a serem desenvolvidos estão prontos mas sem implementação alguma, o que você desenvolverá ao longo do projeto.</li>
 
-Models/: Este diretório armazena os arquivos com as models do banco de dados. As models City, Hotel e Room serão as instruções para as tabelas Cities, Hotels e Rooms. Lembre-se, o nome da tabela não é dado pelo nome da model mas sim pelo nome do DBSet<model> presente no contexto.
+<li>Models/: Este diretório armazena os arquivos com as models do banco de dados. As models City, Hotel e Room serão as instruções para as tabelas Cities, Hotels e Rooms. Lembre-se, o nome da tabela não é dado pelo nome da model mas sim pelo nome do DBSet<model> presente no contexto.</li>
 
-DTO/: Este diretório armazena as classes de DTO. Algumas rotas esperam as responses baseadas nestes DTOs. Você pode conferir isso pelo requisito do projeto e pelo retorno dos métodos dos repositories.
+<li>DTO/: Este diretório armazena as classes de DTO. Algumas rotas esperam as responses baseadas nestes DTOs. Você pode conferir isso pelo requisito do projeto e pelo retorno dos métodos dos repositories.</li>
 
-Repository/: Este diretório armazena as lógicas que farão a interação com o banco de dados. Os métodos de cada requisito já estão criados e você deverá incluir a implementação de cada um desses métodos respeitando o retorno do DTO. Além disso, você terá o arquivo TrybeHotelContext com o contexto para a conexão com o banco de dados. Todos os repository e o context possuem interfaces que estão nesse diretório e fornecem o contrato para essas classes.
-
-
-## Database Utilizado
-  - [Nessa seção](#Azure) temos o diagrama de entidades;
+<li>Repository/: Este diretório armazena as lógicas que farão a interação com o banco de dados. Os métodos de cada requisito já estão criados e você deverá incluir a implementação de cada um desses métodos respeitando o retorno do DTO. Além disso, você terá o arquivo TrybeHotelContext com o contexto para a conexão com o banco de dados. Todos os repository e o context possuem interfaces que estão nesse diretório e fornecem o contrato para essas classes.</li>
+</UL>
 
 <details>
   <summary><strong> Requisitos </strong></summary>
@@ -324,11 +322,10 @@ O endpoint deve ser acessível através da URL /room/:roomId e deve ser do tipo 
 O corpo da requisição é vazio.
 A resposta deve ser o status 204.
 O que será testado:
-
 <UL>
 <li>Será testado que, quando solicitada a requisição, a mesma faça a exclusão solicitada no banco de dados.</li>
 <li>Será testado que o status de retorno será 204.</li>
-<UL>
+</UL>
 
 ### 9. Implemente as models da aplicação
 Mais informações:
