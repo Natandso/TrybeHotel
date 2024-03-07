@@ -84,6 +84,8 @@ O endpoint deve ser acessível através da URL /city e deve ser do tipo GET;
 O corpo da requisição é vazio.
 A resposta deve ser o status 200.
 O corpo da resposta deve seguir o formato abaixo:
+
+```json
 [
     {
 	    "cityId": 1,
@@ -94,9 +96,11 @@ O corpo da resposta deve seguir o formato abaixo:
 ]
 O que será testado:
 
+<UL>
 Será testado que, quando solicitada a requisição, a mesma informe os dados correspondentes do banco de dados.
 Será testado que o status de retorno será 200.
 Será testado que o corpo da resposta segue o padrão esperado.
+</UL>
 
 ### 3. Desenvolva o endpoint POST /city
 Mais informações:
@@ -520,6 +524,8 @@ Será testado que não é possível consultar uma reserva com credencial inváli
 Será testado que é possível consultar uma reserva com sucesso
 A resposta deve ser o status 200.
 O corpo da resposta deve seguir o formato abaixo:
+
+ ```json
 [
     {
 	  "userId": 1,
