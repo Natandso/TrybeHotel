@@ -138,8 +138,8 @@ O corpo da resposta deve seguir o formato abaixo:
 O que será testado:
 <ul>
 <li>Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo</li>
-Será testado que o status de retorno será 201.
-Será testado que o corpo da resposta segue o padrão esperado.
+<li>Será testado que o status de retorno será 201.</li>
+<li>Será testado que o corpo da resposta segue o padrão esperado.</li>
 </ul>
 
 ### 4. Desenvolva o endpoint GET /hotel
@@ -175,9 +175,9 @@ O corpo da resposta deve seguir o formato abaixo:
 
 O que será testado:
 <UL>
-Será testado que, quando solicitada a requisição, a mesma informe os dados correspondentes do banco de dados.
-Será testado que o status de retorno será 200.
-Será testado que o corpo da resposta segue o padrão esperado.
+<li>Será testado que, quando solicitada a requisição, a mesma informe os dados correspondentes do banco de dados.</li>
+<li>Será testado que o status de retorno será 200.</li>
+<li>Será testado que o corpo da resposta segue o padrão esperado.</li>
 </UL>
 
 ### 5. Desenvolva o endpoint POST /hotel
@@ -218,9 +218,9 @@ O corpo da resposta deve seguir o formato abaixo:
 
 O que será testado:
 <UL>
-Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo
-Será testado que o status de retorno será 201.
-Será testado que o corpo da resposta segue o padrão esperado.
+<li>Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo</li>
+<li>Será testado que o status de retorno será 201.</li>
+<li>Será testado que o corpo da resposta segue o padrão esperado.</li>
 </UL>
 
 ### 6. Desenvolva o endpoint GET /room/:hotelId
@@ -263,9 +263,9 @@ O corpo da resposta deve seguir o formato abaixo:
 O que será testado:
 
 <UL>
-Será testado que, quando solicitada a requisição, a mesma informe os dados correspondentes do banco de dados.
-Será testado que o status de retorno será 200.
-Será testado que o corpo da resposta segue o padrão esperado.
+<li>Será testado que, quando solicitada a requisição, a mesma informe os dados correspondentes do banco de dados.<li>
+<li>Será testado que o status de retorno será 200.</li>
+<li>Será testado que o corpo da resposta segue o padrão esperado.</li>
 </UL>
 
 ### 7. Desenvolva o endpoint POST /room
@@ -310,9 +310,9 @@ O corpo da resposta deve seguir o formato abaixo:
 ```
 O que será testado:
 <UL>
-Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo
-Será testado que o status de retorno será 201.
-Será testado que o corpo da resposta segue o padrão esperado.
+<li>Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo</li>
+<li>Será testado que o status de retorno será 201.</li>
+<li>Será testado que o corpo da resposta segue o padrão esperado.</li>
 </UL>
 
 ### 8. Desenvolva o endpoint DELETE /room/:roomId
@@ -326,8 +326,8 @@ A resposta deve ser o status 204.
 O que será testado:
 
 <UL>
-Será testado que, quando solicitada a requisição, a mesma faça a exclusão solicitada no banco de dados.
-Será testado que o status de retorno será 204.
+<li>Será testado que, quando solicitada a requisição, a mesma faça a exclusão solicitada no banco de dados.</li>
+<li>Será testado que o status de retorno será 204.</li>
 <UL>
 
 
@@ -342,8 +342,8 @@ Implemente o contexto do banco de dados
 
 O que será testado:
 <UL>
-Será testado que todas as models foram implementadas corretamente.
-Será testado que as models possuem as chaves primárias e estrangeiras necessárias.
+<li>Será testado que todas as models foram implementadas corretamente.</li>
+<li>Será testado que as models possuem as chaves primárias e estrangeiras necessárias.</li>
 </UL>
 
 ### 10. Desenvolva o endpoint POST /user
@@ -362,11 +362,13 @@ O corpo da sua requisição deve seguir o tipo UserDtoInsert que deverá ser imp
 O endpoint deve ser acessível através da URL /user e deve ser do tipo POST;
 O atributo userType deve ser salvo com o valor client.
 O corpo da requisição deve seguir o padrão abaixo
+```json
 {
 	"Name":"Rebeca",
 	"Email": "rebeca.santos@trybehotel.com",
 	"Password": "123456"
 }
+```
 Será testado que não é possível inserir uma pessoa usuária com e-mail repetido
 Será testado que é possível inserir uma pessoa usuária com sucesso
 ⚠️ A partir da criação deste endpoint, você poderá utilizar o cadastro de pessoas usuárias. O sistema automaticamente cadastrará uma pessoa usuária admin com o e-mail admin@admin.com e senha admin. Você também pode alterar qualquer pessoa usuária para admin realizando um update no banco de dados com o comando SQL:
@@ -392,10 +394,12 @@ Caso a pessoa usuária seja do tipo admin, adicione em suas claims, uma claim co
 
 O endpoint deve ser acessível através da URL /login e deve ser do tipo POST;
 O corpo da requisição deve seguir o padrão abaixo
+```json
 {
 	"Email": "rebeca.santos@trybehotel.com",
 	"Password": "123456"
 }
+```
 Será testado que não é possível fazer login com credenciais erradas
 Será testado que é possível fazer login com sucesso
 
@@ -468,16 +472,19 @@ O endpoint deve ser acessível através da URL /booking e deve ser do tipo POST;
 O endpoint deve ter autorização para a Política Client (desenvolvida nos requisitos 4, 5 ou 6).
 O endpoint deve obter a pessoa usuária pelo token.
 O corpo da requisição deve seguir o padrão abaixo
+```json
 {
 	"CheckIn":"2030-08-27",
 	"CheckOut":"2030-08-28",
 	"GuestQuant":"1",
 	"RoomId":1
 }
+```
 Será testado que não é possível inserir uma reserva se a quantidade de hóspedes for maior do que a capacidade do quarto
 Será testado que é possível inserir uma nova reserva com sucesso
 A resposta deve ser o status 201.
 O corpo da resposta deve seguir o formato abaixo:
+```json
 {
 	"bookingId": 1,
 	"checkIn": "2030-08-27T00:00:00",
@@ -497,6 +504,7 @@ O corpo da resposta deve seguir o formato abaixo:
 		}
 	}
 }
+```
 O que será testado:
 
 Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo
@@ -525,6 +533,7 @@ Será testado que não é possível consultar uma reserva com credencial inváli
 Será testado que é possível consultar uma reserva com sucesso
 A resposta deve ser o status 200.
 O corpo da resposta deve seguir o formato abaixo:
+```json
 {
 	"bookingId": 1002,
 	"checkIn": "2023-08-27T00:00:00",
@@ -544,6 +553,7 @@ O corpo da resposta deve seguir o formato abaixo:
   	  }
     }
 }
+```
 
 ### 17. Desenvolva o endpoint GET /user
 Mais informações:
@@ -560,10 +570,18 @@ O endpoint deve conter autorização da política Admin e deve responder apenas 
 
 👀 De olho na dica 2: Para converter qualquer tipo de coleção no tipo de coleção List, utilize o método ToList().
 
+<UL>
+<li>
 Será testado que não é possível consultar uma reserva com credencial inválida
+
 Será testado que é possível consultar uma reserva com sucesso
+
 A resposta deve ser o status 200.
+
 O corpo da resposta deve seguir o formato abaixo:
+
+</li>
+</UL>
 
  ```json
 [
@@ -575,5 +593,5 @@ O corpo da resposta deve seguir o formato abaixo:
     }, 
   /*...*/
 ]
-
+```
 </details>
