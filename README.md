@@ -1,6 +1,6 @@
 # Projeto TrybeHotel
 
-Penúltimo projeto de C# fornecido para prática de todas as tecnologias até então estudadas no momento pela instituição Trybe. Neste projeto criamos um CRUD com tudo que aprendemos em c#!
+Penúltimo projeto de C# fornecido para prática de todas as tecnologias até então estudadas no momento pela instituição Trybe. Neste projeto criamos um CRUD com tudo que aprendemos em C#!
 
 ## Diagrama Entidade Relacionamento do projeto
 ![Diagrama Trybe Hotel](image.png)
@@ -39,14 +39,20 @@ Arquivos como .trybe e trybe.yml
 
 
 # Sobre os Requisitos do Projeto
+Controllers/: Este diretório armazena os arquivos com as lógicas dos controllers da aplicação. Os métodos a serem desenvolvidos estão prontos mas sem implementação alguma, o que você desenvolverá ao longo do projeto.
 
-Neste projeto, dividimos ele em  4 partes aonde trago para vocês a junção de todas elas finalizadas!
+Models/: Este diretório armazena os arquivos com as models do banco de dados. As models City, Hotel e Room serão as instruções para as tabelas Cities, Hotels e Rooms. Lembre-se, o nome da tabela não é dado pelo nome da model mas sim pelo nome do DBSet<model> presente no contexto.
+
+DTO/: Este diretório armazena as classes de DTO. Algumas rotas esperam as responses baseadas nestes DTOs. Você pode conferir isso pelo requisito do projeto e pelo retorno dos métodos dos repositories.
+
+Repository/: Este diretório armazena as lógicas que farão a interação com o banco de dados. Os métodos de cada requisito já estão criados e você deverá incluir a implementação de cada um desses métodos respeitando o retorno do DTO. Além disso, você terá o arquivo TrybeHotelContext com o contexto para a conexão com o banco de dados. Todos os repository e o context possuem interfaces que estão nesse diretório e fornecem o contrato para essas classes.
 
 
 ## Database Utilizado
   - [Nessa seção](#Azure) temos o diagrama de entidades;
 
 <details>
+  <summary><strong> Requisitos </strong></summary>
 
 ### 1. Implemente as models da aplicação
 Mais informações:
