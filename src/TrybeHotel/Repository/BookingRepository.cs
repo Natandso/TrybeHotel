@@ -102,7 +102,7 @@ namespace TrybeHotel.Repository
 
         public Room GetRoomById(int RoomId)
         {
-            throw new NotImplementedException();
+            return _context.Rooms.FirstOrDefault(r => r.RoomId == RoomId);
         }
 
     }
