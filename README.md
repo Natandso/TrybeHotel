@@ -329,6 +329,11 @@ O que será testado:
 <li>Será testado que, quando solicitada a requisição, a mesma faça a exclusão solicitada no banco de dados.</li>
 <li>Será testado que o status de retorno será 204.</li>
 <UL>
+
+</details>
+
+<details>
+
 ### 9. Implemente as models da aplicação
 Mais informações:
 Implemente os arquivos do diretório /src/TrybeHotel/Models/
