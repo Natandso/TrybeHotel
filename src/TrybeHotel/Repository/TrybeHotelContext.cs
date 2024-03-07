@@ -10,7 +10,7 @@ public class TrybeHotelContext : DbContext, ITrybeHotelContext
     public DbSet<User> Users { get; set; } = null!;
     public DbSet<Booking> Bookings { get; set; } = null!;
     public TrybeHotelContext(DbContextOptions<TrybeHotelContext> options) : base(options) {
-        Seeder.SeedUserAdmin(this);
+        
     }
     public TrybeHotelContext() { }
     
