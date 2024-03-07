@@ -646,4 +646,15 @@ O endpoint deve conter autorização da política Admin e deve responder apenas 
   /*...*/
 ]
 ```
+
+### Te amo Camilla 
+abaixo eu registro os motivos para eu amar tanto essa garota:
+
+<OL>
+<li>Sorriso dela é incrivel </li>
+<li>tua voz e tua respiração são meus sons preferidos</li>
+<li>amo seu cabelo seu cheirinho e o jeitinho que vc cuida de mim</li>
+<li>olhinhos de estrelinhas</li>
+</OL>
+
 </details>
