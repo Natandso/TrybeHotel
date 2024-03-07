@@ -123,8 +123,12 @@ O corpo da requisição deve seguir o padrão abaixo
 {
 	"Name": "Rio de Janeiro"
 }
+```
+
 A resposta deve ser o status 201.
 O corpo da resposta deve seguir o formato abaixo:
+
+```json
 {
 	  "cityId": 2,
 	  "name": "Rio de Janeiro"
@@ -132,11 +136,11 @@ O corpo da resposta deve seguir o formato abaixo:
 ```
 
 O que será testado:
-<UL>
+<ul>
 Será testado que, quando solicitada a requisição, a mesma insira no banco de dados e retorne de acordo com o modelo
 Será testado que o status de retorno será 201.
 Será testado que o corpo da resposta segue o padrão esperado.
-</UL>
+</ul>
 
 ### 4. Desenvolva o endpoint GET /hotel
 Mais informações:
