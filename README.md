@@ -53,18 +53,66 @@ Arquivos como .trybe e trybe.yml
   <summary><strong> Requisitos </strong></summary>
 
 ### 1. Implemente as models da aplicação
+1. Implemente as models da aplicação
 Mais informações:
 Implemente os arquivos do diretório /src/TrybeHotel/Models/
 
 Implemente a model City
+
+City representará as cidades da aplicação e deverá conter os seguintes campos: - `CityId`: Chave primária (int) - `Name`: string Cada cidade tem vários hotéis. A propriedade de navegação para `Hotel` deve se chamar `Hotels` (anulável).
+Em caso de dúvidas, consulte o diagrama de entidade-relacionamento
+
 Implemente a model Hotel
+
+Hotel representará os hotéis da aplicação e deverá conter os seguintes campos:
+
+HotelId: Chave primária (int)
+Name: string
+Address: string
+CityId: Chave estrangeira para a model City (int) Cada hotel tem vários quartos. A propriedade de navegação para Room deve se chamar Rooms (anulável). Cada hotel tem apenas uma cidade. A propriedade de navegação para City deve se chamar City (anulável).
+Em caso de dúvidas, consulte o diagrama de entidade-relacionamento
+
 Implemente a model Room
+
+Room representará os quartos da aplicação e deverá conter os seguintes campos:
+
+RoomId: Chave primária (int)
+Name: string
+Capacity: int
+Image: string
+HotelId: Chave estrangeira para a model Hotel(int). Cada quarto tem apenas um hotel. A propriedade de navegação para Hotel deve se chamar Hotel (anulável).
+Em caso de dúvidas, consulte o diagrama de entidade-relacionamento
+
+Implemente a model User
+
+User representará as pessoas usuárias da aplicação e deverá conter os seguintes campos:
+UserId: Chave primária (int)
+Name: string
+Email: string
+Password: string
+UserType: string
+Cada pessoa usuária tem várias reservas. A propriedade de navegação para Booking deve se chamar Bookings (anulável).
+
+O atributo UserType, no futuro, receberá os valores admin ou client e representará a nossa autorização.
+
+Em caso de dúvidas, consulte o diagrama de entidade-relacionamento
+
+Implemente a model Booking
+
+Booking representará as reservas da aplicação e deverá conter os seguintes campos:
+BookingId: Chave primária (int)
+CheckIn: Datetime (data da entrada)
+CheckOut: Datetime (data de saída)
+GuestQuant: int (número de hóspedes no quarto)
+UserId: int (chave estrangeira que representa a pessoa usuária que está reservando o quarto)
+RoomId: int (chave estrangeira que representa o quarto que está sendo reservado)
+Cada reserva tem uma pessoa usuária. A propriedade de navegação para User deve se chamar User (anulável). Cada reserva tem um quarto. A propriedade de navegação para Room deve se chamar Room (anulável).
+
 Implemente o contexto do banco de dados
 
-O que será testado:
+<UL>
 
-Será testado que todas as models foram implementadas corretamente.
-Será testado que as models possuem as chaves primárias e estrangeiras necessárias.
+</UL>
 
 ### 2. Desenvolva o endpoint GET /city
 Mais informações:
